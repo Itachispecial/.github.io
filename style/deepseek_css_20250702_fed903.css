@@ -1,0 +1,217 @@
+/* 移动端优化 */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+    }
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    .logo img {
+        height: 36px;
+        max-width: 80vw;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 0.5rem 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    .hero {
+        height: 38vh;
+        min-height: 220px;
+    }
+    .hero-text h1 {
+        font-size: 1.3rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    .about {
+        padding-top: 1.5rem;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+    .activities {
+        padding: 2rem 1rem;
+    }
+    .activity-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .activity-card img {
+        height: 140px;
+    }
+    footer {
+        font-size: 0.95rem;
+        padding: 1rem 0 0.5rem 0;
+    }
+}
+/* 组织介绍模块居中 */
+.about {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    padding-top: 3rem;
+}
+.activity-card h3, .activity-card p {
+    text-align: center;
+}
+/* 基本样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #fffdfa;
+    color: #000000;
+}
+
+/* 导航栏样式 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5%;
+    background-color: #444444;
+    color: #f3f3fa;
+}
+/* logo图片样式 */
+.logo img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 宣传大图样式 */
+/* 轮播大图样式 */
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero-slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s;
+    z-index: 1;
+}
+.hero-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hero-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 3;
+    width: 100%;
+    pointer-events: none;
+}
+
+.hero-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 4;
+}
+.hero-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    border: 2px solid #fff;
+}
+.hero-dot.active {
+    background: #fff;
+    transform: scale(1.2);
+}
+
+/* 活动介绍样式 */
+.activities {
+    padding: 4rem 5%;
+    background: #fffdfa;
+footer {
+    background: #231942;
+    color: #f3f3fa;
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+}
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.activity-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.activity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+    }
+}
