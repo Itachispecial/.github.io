@@ -9,9 +9,8 @@
 <body>
     <!-- 导航栏 -->
     <nav>
-        <div class="logo">
-            <img src="images/tittle-1.png" alt="学术组织LOGO" />
-        </div>
+        <div class="logo-text">Petroleum Power Cup</div>
+        <button class="nav-toggle" aria-label="展开菜单"><span></span></button>
         <ul>
             <li><a href="#home">首页</a></li>
             <li><a href="#about">组织介绍</a></li>
@@ -22,11 +21,13 @@
 
     <!-- 宣传大图 -->
     <section id="home" class="hero">
+        <div class="hero-arrow hero-arrow-left" id="hero-arrow-left">&#10094;</div>
         <div class="hero-slides">
-            <img class="hero-slide active" src="images/11.png" alt="宣传图1">
-            <img class="hero-slide" src="images/invitation.jpg" alt="宣传图2">
-            <img class="hero-slide" src="images/DSCF4171.jpg" alt="宣传图3">
+            <img class="hero-slide active" src="images/DSCF4171.jpg" alt="宣传图1">
+            <img class="hero-slide" src="images/灯塔.jpg" alt="宣传图2">
+            <img class="hero-slide" src="images/DSCF0234_副本.jpg" alt="宣传图3">
         </div>
+        <div class="hero-arrow hero-arrow-right" id="hero-arrow-right">&#10095;</div>
         <div class="hero-text">
             <h1>Welcome to Petroleum Power Cup</h1>
             <p>The Impossibility of Creating Everything</p>
@@ -37,11 +38,24 @@
             <span class="hero-dot"></span>
         </div>
     </section>
-    <!-- 组织介绍 -->
-    <section id="about" class="about">
-        <h2>组织介绍</h2>
-        <p>学术组织名称致力于推动学术交流与创新，汇聚各领域优秀学者与学生，定期举办讲座、研讨会、学术沙龙等活动，促进知识共享与思想碰撞。</p>
-        <p><strong>开放、合作、创新、卓越</strong></p>
+    <!-- 特殊会议 -->
+    <section class="special-meeting">
+        <div class="special-meeting-left">
+            <img src="images/11.png" alt="特殊会议图片" />
+        </div>
+        <div class="special-meeting-right">
+            <h2>特殊会议</h2>
+            <div class="special-meeting-notice">
+                <h3>会议通知</h3>
+                <ul>
+                    <li>会议时间：2025年1月1日 19:00-21:00</li>
+                    <li>会议地点：东南大学学术中心</li>
+                    <li>主题：能源与未来</li>
+                    <li>嘉宾：多位领域顶尖专家</li>
+                </ul>
+            </div>
+            <p class="special-meeting-desc">本次特殊会议将围绕“能源与未来”主题展开高端对话与前沿分享，促进跨界交流与创新突破。</p>
+        </div>
     </section>
 
     <!-- 学术活动展示 -->
@@ -66,11 +80,20 @@
         </div>
     </section>
 
+
+    <!-- 组织介绍（底部） -->
+    <section id="about" class="about">
+        <h2>组织介绍</h2>
+        <p>学术组织名称致力于推动学术交流与创新，汇聚各领域优秀学者与学生，定期举办讲座、研讨会、学术沙龙等活动，促进知识共享与思想碰撞。</p>
+        <p><strong>开放、合作、创新、卓越</strong></p>
+    </section>
+
     <!-- 页脚 -->
     <footer>
         <p>© 2025 Petroleum Power Cup 2025. 保留所有权利.</p>
     </footer>
 
     <script src="scripts/hero-carousel.js"></script>
+    <script src="scripts/nav-toggle.js"></script>
 </body>
 </html>
