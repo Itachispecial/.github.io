@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特殊会议 - Petroleum Power Cup 2025</title>
+    <link rel="stylesheet" href="style/deepseek_css_20250702_fed903.css">
+</head>
+<body>
+    <nav>
+        <div class="logo-text">Petroleum Power Cup</div>
+        <button class="nav-toggle" aria-label="展开菜单"><span></span></button>
+        <ul>
+            <li><a href="index.html#home">首页</a></li>
+            <li><a href="index.html#about">组织介绍</a></li>
+            <li><a href="index.html#activities">学术活动</a></li>
+            <li><a href="index.html#contact">联系我们</a></li>
+        </ul>
+    </nav>
+    <!-- 顶部超级大照片展示 -->
+    <div class="special-meeting-top-photo">
+        <img src="images/11.png" alt="会议主视觉大图" />
+    </div>
+    <section class="special-meeting special-meeting-a4" style="margin-top: 2.5rem;">
+        <div class="special-meeting-left special-meeting-notice">
+            <h2>特殊会议</h2>
+            <div>
+                <h3>会议通知</h3>
+                <ul>
+                    <li>会议时间：2025年1月1日 19:00-21:00</li>
+                    <li>会议地点：东南大学学术中心</li>
+                    <li>主题：能源与未来</li>
+                    <li>嘉宾：多位领域顶尖专家</li>
+                </ul>
+            </div>
+            <p class="special-meeting-desc">本次特殊会议将围绕“能源与未来”主题展开高端对话与前沿分享，促进跨界交流与创新突破。</p>
+        </div>
+        <div class="special-meeting-right special-meeting-a4-photos">
+            <img src="images/invitation.jpg_副本.jpeg" alt="A4照片1" />
+            <img src="images/invitation.jpg 2_副本.jpeg" alt="A4照片2" />
+            <img src="images/invitation.jpg 3_副本.jpeg" alt="A4照片3" />
+            <img src="images/invitation.jpg 4_副本.jpeg" alt="A4照片4" />
+        </div>
+    </section>
+    <section class="about">
+        <h2>会议简介</h2>
+        <p>本次特殊会议聚焦能源领域的前沿发展与未来趋势，邀请多位专家学者进行主题报告与圆桌讨论，推动学科交叉与创新合作。</p>
+        <p>欢迎各界同仁积极参与，共同探讨能源与未来的无限可能！</p>
+    </section>
+    <footer>
+        <p>© 2025 Petroleum Power Cup 2025. 保留所有权利.</p>
+    </footer>
+    <script src="scripts/nav-toggle.js"></script>
+    <script>
+    // 只让A4照片区滚动到顶部，不再scrollIntoView，避免网页整体跳转
+    // 只让A4照片区滚动到顶部，不再scrollIntoView，保证网页整体不跳转
+    window.addEventListener('DOMContentLoaded', function() {
+        // 先让网页整体回到顶部
+        window.scrollTo(0, 0);
+        // 让A4照片区自身滚动到顶部，并强制第一个img对齐顶部
+        setTimeout(function() {
+            var a4Photos = document.querySelector('.special-meeting-a4-photos');
+            if (a4Photos) {
+                a4Photos.scrollTop = 0;
+                var firstImg = a4Photos.querySelector('img');
+                if (firstImg) {
+                    // 只在A4照片区内部滚动，不影响页面整体
+                    firstImg.scrollIntoView({behavior: 'auto', block: 'start', inline: 'nearest'});
+                }
+            }
+        }, 0);
+    });
+    </script>
+</body>
+</html>
